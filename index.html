@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Flower 🌸</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe6f2, #e6f7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      max-width: 500px;
+    }
+
+    .flower {
+      font-size: 100px;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    h1 {
+      color: #e83e8c;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+    }
+
+    button {
+      background: #e83e8c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #c72c73;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #e83e8c;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="flower">🌸</div>
+
+    <h1>AI Flower</h1>
+
+    <p>
+      Welcome to my simple AI Flower website!
+    </p>
+
+    <button onclick="generateMessage()">
+      Generate AI Message
+    </button>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function generateMessage() {
+      const messages = [
+        "🌸 Your flower is blooming with AI!",
+        "🌺 Every flower has its own beauty.",
+        "🌼 Keep growing and keep learning!",
+        "🌷 AI says: Stay positive and bloom!",
+        "🌹 Your digital garden is beautiful!"
+      ];
+
+      const randomMessage =
+        messages[Math.floor(Math.random() * messages.length)];
+
+      document.getElementById("message").textContent = randomMessage;
+    }
+  </script>
+
+</body>
+</html>
